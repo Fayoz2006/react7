@@ -1,0 +1,146 @@
+.screen-overview {
+    position: absolute;
+    top: 112px;
+    left: 252px;
+    right: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 26px;
+    .header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div {
+            display: flex;
+            align-items: center;
+            grid-gap: 40px;
+            h1 {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            span {
+                color: #54669c;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        button {
+            width: 125px;
+            height: 32px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(271.88deg, #3887fe 4.26%, #3ba0ff 51.37%, #5fb2ff 99.01%);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 300ms ease;
+            &:hover {
+                transform: scale(1.05);
+                background: linear-gradient(88.43deg, #2f3453 11.5%, #242845 76.7%);
+            }
+        }
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 312px;
+        grid-gap: 16px;
+        .left-side {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 312px;
+            grid-gap: 19px;
+            .balance,
+            .spending {
+                background: linear-gradient(180deg, rgba(27, 18, 78, 0.2) 0%, #0f0b38 93.37%);
+                box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+                b {
+                    color: #fff;
+                }
+            }
+        }
+        .right-side {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 148px;
+            grid-gap: 16px;
+            .item {
+                padding: 16px;
+                box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+                .title {
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                .info {
+                    display: flex;
+                    align-items: center;
+                    grid-gap: 19px;
+                    .left-side {
+                        display: flex;
+                        align-items: center;
+                        grid-gap: 9px;
+                        img {
+                            width: 64px;
+                            height: 64px;
+                        }
+                        .amount {
+                            display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            grid-gap: 4px;
+                            b {
+                                color: #fff;
+                                font-size: 14px;
+                                font-weight: 700;
+                            }
+                            p {
+                                color: #616a8b;
+                                font-size: 12px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    .right-side {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        grid-gap: 0px;
+                        .small-item {
+                            display: flex;
+                            align-items: center;
+                            grid-gap: 10px;
+                            border-bottom: 0.5px solid #644696;
+                            &:nth-child(3) {
+                                border-bottom: none;
+                            }
+                            .info {
+                                color: #fff;
+                                padding: 6px 0px;
+                                white-space: nowrap;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                grid-gap: 2px;
+                                b {
+                                    font-size: 8px;
+                                    font-weight: 400;
+                                }
+                                p {
+                                    font-size: 6px;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
